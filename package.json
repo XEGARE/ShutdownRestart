@@ -1,0 +1,24 @@
+{
+  "name": "shutdownrestart",
+  "version": "1.0.0",
+  "description": "Удалённая перезагрузка/отключение ПК",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XEGARE/ShutdownRestart.git"
+  },
+  "author": "XEGARE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XEGARE/ShutdownRestart/issues"
+  },
+  "homepage": "https://github.com/XEGARE/ShutdownRestart#readme",
+  "dependencies": {
+    "fastify": "^4.25.2"
+  }
+}
