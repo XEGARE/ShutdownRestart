@@ -85,7 +85,7 @@ fastify.get('*', async (request, reply) => {
 
 try
 {
-  await fastify.listen({ port: config.app.port });
+  await fastify.listen({ host: '0.0.0.0', port: config.app.port });
   console.log(`Сервер запущен по адресу http://127.0.0.1:${config.app.port}`);
 }
 catch (error)
