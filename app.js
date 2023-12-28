@@ -8,7 +8,7 @@ import config from './ShutdownRestart.json' with { type: "json" }
 fastify.get('/shutdown/', async (request, reply) => {
   if(request.query.key != config.app.key)
   {
-    return { status: 'ok', value: 'Доступ запрещен!' };
+    return { status: 'fail', value: 'Доступ запрещен!' };
   }
   else
   {
@@ -27,7 +27,7 @@ fastify.get('/shutdown/', async (request, reply) => {
     }
     else
     {
-      return { status: 'ok', value: 'Время не передано!' };
+      return { status: 'fail', value: 'Время не передано!' };
     }
   }
 });
@@ -35,7 +35,7 @@ fastify.get('/shutdown/', async (request, reply) => {
 fastify.get('/restart/', async (request, reply) => {
   if(request.query.key != config.app.key)
   {
-    return { status: 'ok', value: 'Доступ запрещен!' };
+    return { status: 'fail', value: 'Доступ запрещен!' };
   }
   else
   {
@@ -54,7 +54,7 @@ fastify.get('/restart/', async (request, reply) => {
     }
     else
     {
-      return { status: 'ok', value: 'Время не передано!' };
+      return { status: 'fail', value: 'Время не передано!' };
     }
   }
 });
@@ -62,7 +62,7 @@ fastify.get('/restart/', async (request, reply) => {
 fastify.get('/cancel/', async (request, reply) => {
   if(request.query.key != config.app.key)
   {
-    return { status: 'ok', value: 'Доступ запрещен!' };
+    return { status: 'fail', value: 'Доступ запрещен!' };
   }
   else
   {
@@ -80,7 +80,7 @@ fastify.get('/cancel/', async (request, reply) => {
 });
 
 fastify.get('*', async (request, reply) => {
-  return { status: 'ok', value: 'Неизвестная команда' };
+  return { status: 'fail', value: 'Неизвестная команда' };
 });
 
 try
