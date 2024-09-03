@@ -1,6 +1,5 @@
 {
-    "app":
-    {
+    "app": {
         "port": 5555,
         "key": "secret"
     }
