@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/XEGARE/ShutdownRestart#readme",
   "dependencies": {
-    "fastify": "^4.25.2"
+    "fastify": "^4.28.1",
+    "node-hide-console-window": "^2.2.0"
   }
 }
